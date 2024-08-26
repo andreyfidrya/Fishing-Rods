@@ -1696,7 +1696,8 @@ object {
 --------------------------------------------------------------*/
 
 .card {
-    position: relative;
+    margin-left: 10px;
+	position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1818,6 +1819,16 @@ object {
 	text-decoration:line-through;
 }
 
+.card-actions {
+    display: flex;
+    margin-top: 8px;
+    flex-shrink: 0;
+    padding: 0 14px 30px;
+    gap: 17px;
+    align-items: center;
+    justify-content: center;
+}
+
 .card-actions-quantity-btn {
     margin-top: 5px;
     padding: 0;
@@ -1847,7 +1858,7 @@ object {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 155px;
     height: 40px;
     padding-right: 15px;
@@ -1867,5 +1878,36 @@ object {
 
 .add-to-cart-button:hover { 
     background: #426D1E;
+}
+
+.card-input {
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    padding: 0;
+    border: none;
+    background: #ffffff;
+    border-radius: 999px;
+    color: #518526;
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.26px;
+    outline: none;
+}
+
+.card-minus,
+.card-plus {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    opacity: 0.5;
+    cursor: pointer;
 }
 	
