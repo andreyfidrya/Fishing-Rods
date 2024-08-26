@@ -1,0 +1,31 @@
+2024-08-14T14:26:31+00:00 DEBUG POST: https://ads.tiktok.com/marketing_api/api/developer/app/create_auto_approve/
+
+{"business_platform":"PROD","smb_id":"tt4b_woocommerce_66bcbe978e17ahttpsfishing-rodslocalwp-admin","smb_name":"PROD","redirect_url":"https:\/\/fishing-rods.local\/wp-admin\/"}
+ ajax: no
+2024-08-14T14:26:32+00:00 DEBUG Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Tt-Logid: 202408141426294B729CC84927DD200B26,202408141426294B729CC84927DD200B26
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-tt-trace-host: 01d55f1363ac42e51a8d96af8826bb35035837a41a7fea0b94d23a82c97eb66256023a5c89695001be52570092fb8ec2e3221371a8b66086304abfe5db2286e1f53187ca2bc70e23c169043bd12b8dfdeac758dc373a79697f93b87cc7caad3f1210e9a8db0b702052e315a7e7b34aa703
+x-tt-trace-id: 00-2408141426294B729CC84927DD200B26-0435C404433C5669-00
+Server: TLB
+Content-Encoding: gzip
+Content-Length: 206
+X-Origin-Response-Time: 67,23.40.40.157
+X-Akamai-Request-ID: 6cd3cd32.2d28100f
+Date: Wed, 14 Aug 2024 14:26:31 GMT
+X-Cache: TCP_MISS from a104-94-100-39.deploy.akamaitechnologies.com (AkamaiGHost/11.6.1-8b2dfe3939b99771c02ec6eca94739cd) (-)
+Connection: close
+Vary: Accept-Encoding
+X-Cache-Remote: TCP_MISS from a23-40-40-157.deploy.akamaitechnologies.com (AkamaiGHost/11.6.1-8b2dfe3939b99771c02ec6eca94739cd) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=176, origin; dur=67
+Server-Timing: inner; dur=62
+X-Parent-Response-Time: 239,104.94.100.39
+
+{"code":0,"msg":"ok","data":{"app_secret":"45541ca50ae27b822154b4984159050c246e4ed4","external_data_key":"851a5ca0-ee6e-48af-8230-970d269c2312","app_id":"7403001443008905217","redirect_uri":"https:\/\/fishing-rods.local\/wp-admin\/"}}
+
+2024-08-14T14:52:43+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-08-14T14:52:43+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
