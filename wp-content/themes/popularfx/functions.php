@@ -881,7 +881,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
     $product_regular_price = $product->get_regular_price();
 	$term = get_term_by('slug', $category_slug, 'product_cat');
 	$category_name = $term->name;    
-    ob_start();
+    // ob_start();
 	?>
 	<div class="card">
 		<a class="card-link link" href="<?php echo $product->get_permalink(); ?>">
@@ -949,7 +949,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
 function list_all_products(){
 	$args = array(
 		'post_type' => 'product',
-		'posts_per_page' => -1
+		'posts_per_page' => -1		 		
 	);
 
 	$products = new WP_Query($args);
@@ -969,11 +969,13 @@ function list_all_products(){
 }
 
 function generate_products_by_category($category_slug){
-	ob_start();
-
+	
 	$args = array(
 		'product_cat' => $category_slug,
-		'posts_per_page' => -1,		
+		'posts_per_page' => -1,
+		'order' => 'ASC',
+        'meta_key' => 'product_order', 
+        'orderby' => 'meta_value_num'		
 	);
 
 	$term = get_term_by('slug', $category_slug, 'product_cat');	
