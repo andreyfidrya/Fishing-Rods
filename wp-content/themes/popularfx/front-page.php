@@ -25,9 +25,9 @@ get_header();
         // generate_discount_products('spinning-roads');
         // generate_discount_products('float-roads');
         
-        $product_details = generate_product_details(106);
+        // $product_details = generate_product_details(106);
         
-        generate_product_block(106, $product_details, 'feeder-roads');        
+        // generate_product_block(106, $product_details, 'feeder-roads');         
 
     ?>
 

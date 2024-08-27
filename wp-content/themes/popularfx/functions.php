@@ -943,7 +943,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
 		</a>				
 	</div>
 	<?php
-	//return ob_get_clean();	
+	// return ob_get_clean();	
 }
 
 function list_all_products(){
@@ -991,23 +991,33 @@ function generate_products_by_category($category_slug){
 }
 
 function generate_discount_products($category_slug) {
-	$args = array(
-		'product_cat' => $category_slug,
-		'posts_per_page' => -1,		    
-	);
+	
+	?>
+		 
+			<?php
+			$args = array(
+				'product_cat' => $category_slug,
+				'posts_per_page' => -1,		    
+			);
 
-	$term = get_term_by('slug', $category_slug, 'product_cat');	
-	echo "<strong> Товары со скидками в категории $term->name: </strong>";
-
-	$products = wc_get_products($args);
-	foreach ($products as $product) {
-		if ($product->is_on_sale()) {
-			$product_id = $product->get_id();
-			$product_name = $product->get_name();
-			$product_permalink = $product->get_permalink();
-			$product_price = $product->get_price();
-			echo '<li><a href="' . $product_permalink . '">' . $product_name . '</a></li>';
-		}		
-	}
+			$term = get_term_by('slug', $category_slug, 'product_cat');	
+			echo "<h3> Товары со скидками в категории <strong> $term->name: </strong></h3>";
+			?>
+				<div class="cards-container">
+			<?php
+			$products = wc_get_products($args);
+			foreach ($products as $product) {
+				if ($product->is_on_sale()) {
+					$product_id = $product->get_id();
+					$product_details = generate_product_details($product_id);
+					generate_product_block($product_id, $product_details, $category_slug);
+				}		
+			}
+			?>
+				</div>	
+	<?php
+	
 }
+
+
     
