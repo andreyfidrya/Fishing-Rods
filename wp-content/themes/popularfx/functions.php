@@ -972,10 +972,7 @@ function generate_products_by_category($category_slug){
 	
 	$args = array(
 		'product_cat' => $category_slug,
-		'posts_per_page' => -1,
-		'order' => 'ASC',
-        'meta_key' => 'product_order', 
-        'orderby' => 'meta_value_num'		
+		'posts_per_page' => -1,				
 	);
 
 	$term = get_term_by('slug', $category_slug, 'product_cat');	
@@ -992,8 +989,7 @@ function generate_products_by_category($category_slug){
 	}
 }
 
-function generate_discount_products($category_slug) {
-	
+function generate_discount_products($category_slug) {	
 	?>
 		 
 			<?php
@@ -1017,8 +1013,43 @@ function generate_discount_products($category_slug) {
 			}
 			?>
 				</div>	
+	<?php	
+}
+
+function generate_owl_cards_section($category_slug) {
+	?>
+	<section class="main-section main-section-<?php echo $category_slug; ?>">
+		<div class="container main-section-container">
+			<?php
+			$term = get_term_by('slug', $category_slug, 'product_cat');
+			echo '<h2 class="main-section-title"> <span class="main-section-title-type">' . mb_strtoupper($term->name, 'UTF-8') . '</span></h2>';
+			echo '<a class="main-section-link" href="/?product_cat='.$category_slug.'"><span class="main-section-link">ПЕРЕЙТИ В РАЗДЕЛ</span></a>';
+			?>
+			<div class="cards-container">
+			<?php
+				$args = array(
+					'product_cat' => $category_slug,
+					'posts_per_page' => -1,
+					'order' => 'ASC',
+					'meta_key' => 'product_order',      // Указываем ключ метаполя
+					'orderby' => 'meta_value_num',      // Сортировка по числовому значению метаполя
+				);
+
+				$products = wc_get_products($args);
+                foreach ($products as $product) {
+                    $product_id = $product->get_id();
+                    $product_sale_price = $product->get_sale_price();
+                    $product_order = get_field('product_order', $product_id);
+                    if ($product_order > 0) {
+                        $product_details = generate_product_details($product_id);
+                        echo generate_product_block($product_id, $product_details, $category_slug);
+                    }
+                }				
+			?>
+			</div>
+		</div>	
+	</section>
 	<?php
-	
 }
 
 

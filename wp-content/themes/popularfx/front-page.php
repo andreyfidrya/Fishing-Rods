@@ -17,7 +17,7 @@ get_header();
 
     <?php
         
-        generate_products_by_category('feeder-roads');
+        // generate_products_by_category('feeder-roads');
         // generate_products_by_category('spinning-roads');
         // generate_products_by_category('float-roads');
 
@@ -30,6 +30,10 @@ get_header();
         // generate_product_block(106, $product_details, 'feeder-roads');
         
         // list_all_products();
+
+        generate_owl_cards_section('feeder-roads');
+        generate_owl_cards_section('spinning-roads');
+        generate_owl_cards_section('float-roads');
 
     ?>
 

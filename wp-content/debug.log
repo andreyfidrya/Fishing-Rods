@@ -45,3 +45,43 @@ Stack trace:
 [27-Aug-2024 12:15:01 UTC]   Automatic plugin updates starting...
 [27-Aug-2024 12:15:01 UTC]   Automatic plugin updates complete.
 [27-Aug-2024 12:15:02 UTC] Automatic updates complete.
+[28-Aug-2024 11:15:19 UTC] Automatic updates starting...
+[28-Aug-2024 11:15:20 UTC]   Automatic plugin updates starting...
+[28-Aug-2024 11:15:20 UTC]   Automatic plugin updates complete.
+[28-Aug-2024 11:15:21 UTC] Automatic updates complete.
+[28-Aug-2024 12:13:50 UTC] Automatic updates starting...
+[28-Aug-2024 12:13:50 UTC]   Automatic plugin updates starting...
+[28-Aug-2024 12:13:50 UTC]   Automatic plugin updates complete.
+[28-Aug-2024 12:13:50 UTC] Automatic updates complete.
+[28-Aug-2024 17:02:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_product_details() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php:1045
+Stack trace:
+#0 D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\front-page.php(34): generate_owl_cards_section('feeder-roads')
+#1 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include('D:\\OSPanel\\home...')
+#2 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
+#3 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
+#4 {main}
+  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1045
+[28-Aug-2024 17:03:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_product_details() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php:1045
+Stack trace:
+#0 D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\front-page.php(34): generate_owl_cards_section('feeder-roads')
+#1 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include('D:\\OSPanel\\home...')
+#2 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
+#3 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
+#4 {main}
+  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1045
+[28-Aug-2024 17:03:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_product_details() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php:1045
+Stack trace:
+#0 D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\front-page.php(34): generate_owl_cards_section('feeder-roads')
+#1 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include('D:\\OSPanel\\home...')
+#2 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
+#3 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
+#4 {main}
+  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1045
+[28-Aug-2024 17:03:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_product_details() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php:1045
+Stack trace:
+#0 D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\front-page.php(34): generate_owl_cards_section('feeder-roads')
+#1 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include('D:\\OSPanel\\home...')
+#2 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
+#3 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
+#4 {main}
+  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1045
