@@ -1023,7 +1023,7 @@ function generate_owl_cards_section($category_slug) {
 			<?php
 			$term = get_term_by('slug', $category_slug, 'product_cat');
 			echo '<h2 class="main-section-title"> <span class="main-section-title-type">' . mb_strtoupper($term->name, 'UTF-8') . '</span></h2>';
-			echo '<a class="main-section-link" href="/?product_cat='.$category_slug.'"><span class="main-section-link">ПЕРЕЙТИ В РАЗДЕЛ</span></a>';
+			echo '<a class="main-section-link" href="/category/'.$category_slug.'"><span class="main-section-link">ПЕРЕЙТИ В РАЗДЕЛ</span></a>';
 			?>
 			<div class="cards-container">
 			<?php
