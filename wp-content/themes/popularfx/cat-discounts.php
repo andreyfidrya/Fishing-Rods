@@ -19,9 +19,9 @@ get_header();
         <h2 class="category-section-title">СКИДКИ</h2>
         <p class="category-section-text">В нашем интернет магазине можно получить скидки на следующие товары:</p>
     <?php
-    generate_discount_products('feeder-roads');
-    generate_discount_products('spinning-roads');
-    generate_discount_products('float-roads');
+    generate_discount_products('feeder-rods');
+    generate_discount_products('spinning-rods');
+    generate_discount_products('float-rods');
     ?>            
         </div>
     </section>

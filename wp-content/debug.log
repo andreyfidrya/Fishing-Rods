@@ -93,3 +93,6 @@ Stack trace:
 [29-Aug-2024 13:00:30 UTC]   Automatic plugin updates starting...
 [29-Aug-2024 13:00:30 UTC]   Automatic plugin updates complete.
 [29-Aug-2024 13:00:30 UTC] Automatic updates complete.
+[29-Aug-2024 13:28:22 UTC] PHP Warning:  Attempt to read property "name" on bool in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1002
+[29-Aug-2024 13:28:22 UTC] PHP Warning:  Attempt to read property "name" on bool in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1002
+[29-Aug-2024 13:28:22 UTC] PHP Warning:  Attempt to read property "name" on bool in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1002

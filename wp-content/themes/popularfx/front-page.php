@@ -17,23 +17,23 @@ get_header();
 
     <?php
         
-        // generate_products_by_category('feeder-roads');
-        // generate_products_by_category('spinning-roads');
-        // generate_products_by_category('float-roads');
+        // generate_products_by_category('feeder-rods');
+        // generate_products_by_category('spinning-rods');
+        // generate_products_by_category('float-rods');
 
-        // generate_discount_products('feeder-roads');
-        // generate_discount_products('spinning-roads');
-        // generate_discount_products('float-roads');
+        // generate_discount_products('feeder-rods');
+        // generate_discount_products('spinning-rods');
+        // generate_discount_products('float-rods');
         
         // $product_details = generate_product_details(106);
                 
-        // generate_product_block(106, $product_details, 'feeder-roads');
+        // generate_product_block(106, $product_details, 'feeder-rods');
         
         // list_all_products();
 
-        generate_owl_cards_section('feeder-roads');
-        generate_owl_cards_section('spinning-roads');
-        generate_owl_cards_section('float-roads');
+        generate_owl_cards_section('feeder-rods');
+        generate_owl_cards_section('spinning-rods');
+        generate_owl_cards_section('float-rods');
 
     ?>
 
