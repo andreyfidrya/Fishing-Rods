@@ -143,3 +143,4 @@ Stack trace:
 #4 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
 #5 {main}
   thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 864
+[29-Aug-2024 19:27:20 UTC] PHP Warning:  file_get_contents(./cat-feeder-rods.php): Failed to open stream: No such file or directory in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
