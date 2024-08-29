@@ -515,3 +515,7 @@ Sidebar for templates
 }
 
 /* SitePad Posts CSS End */
+
+.category-section-container .cards-container {
+    min-height: 385px;
+}

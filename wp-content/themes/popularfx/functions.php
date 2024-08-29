@@ -861,6 +861,7 @@ function generate_product_details($product_id){
 	$product = wc_get_product($product_id);
 	
 	$details = [
+		'id' => $product->get_id(),
 		'image' => wp_get_attachment_image_url($product->get_image_id(), 'full'),
         'name' => $product->get_name(),
         'price' => $product->get_price(),
@@ -1052,5 +1053,29 @@ function generate_owl_cards_section($category_slug) {
 	<?php
 }
 
+function generate_products_for_category_full($category_slug) {
+	echo "<div class='category-section-container'>";
+
+	$term = get_term_by('slug', $category_slug, 'product_cat');
+    echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
+    echo '<p class="category-section-text">Мы предлагаем большой выбор удилищ. У нас есть удилище для любых предпочтений.</p>';
+	echo '<div class="cards-container">';
+
+		$args = array(
+			'product_cat' => $category_slug,
+			'posts_per_page' => -1
+		);
+
+		$products = wc_get_products($args);
+
+			foreach ($products as $product) {
+				$product_id = $product->get_id();
+				$product_details = generate_product_details($product_id);
+				generate_product_block($product_id, $product_details, $category_slug);
+			}			
+
+	echo '</div>'; 
+	echo '</div>'; 
+}
 
     
