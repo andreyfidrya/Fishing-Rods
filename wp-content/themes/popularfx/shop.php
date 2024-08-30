@@ -8,7 +8,7 @@ Description: PopularFX eCommerce theme
 Version: 1.0
 Text Domain: PopularFX-et
 
-Template Name: PopularFX-all-rods
+Template Name: PopularFX-shop
 
 */
 
