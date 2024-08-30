@@ -13,9 +13,7 @@ Template Name: PopularFX-float-rods
 */
 
 get_header();
-?>
-    <?php
+
     generate_products_for_category_full('float-rods');
-    ?>
-<?php
+    
 get_footer();

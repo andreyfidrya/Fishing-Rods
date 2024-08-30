@@ -13,8 +13,7 @@ Template Name: PopularFX-feeder-rods
 */
 
 get_header();
-?>
-    <?php
+
     generate_products_for_category_full('feeder-rods');    
     ?>
     <div>
