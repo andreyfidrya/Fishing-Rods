@@ -947,6 +947,17 @@ function generate_product_block($product_id, $product_details, $category_slug){
 	// return ob_get_clean();	
 }
 
+function generate_brand_block($category_slug){
+	echo $category_slug;
+	?>
+	
+	<div class="card">
+		<a class="card-link link" href="">
+		</a>
+	</div>
+	<?php
+}
+
 function list_all_products(){
 	$args = array(
 		'post_type' => 'product',
@@ -1073,6 +1084,20 @@ function generate_products_for_category_full($category_slug) {
 				$product_details = generate_product_details($product_id);
 				generate_product_block($product_id, $product_details, $category_slug);
 			}			
+
+	echo '</div>'; 
+	echo '</div>'; 
+}
+
+function generate_products_for_catalogue_full($category_slug) {
+	echo "<div class='category-section-container'>";
+
+	$term = get_term_by('slug', $category_slug, 'product_cat');
+    echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
+    echo '<p class="category-section-text">Мы предлагаем удилища лучших брендов. У нас есть удилище для любых предпочтений.</p>';
+	echo '<div class="cards-container">';
+
+					
 
 	echo '</div>'; 
 	echo '</div>'; 
