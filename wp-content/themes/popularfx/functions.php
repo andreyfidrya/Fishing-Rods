@@ -947,17 +947,6 @@ function generate_product_block($product_id, $product_details, $category_slug){
 	// return ob_get_clean();	
 }
 
-function generate_brand_block($category_slug){
-	echo $category_slug;
-	?>
-	
-	<div class="card">
-		<a class="card-link link" href="">
-		</a>
-	</div>
-	<?php
-}
-
 function list_all_products(){
 	$args = array(
 		'post_type' => 'product',
@@ -1090,17 +1079,44 @@ function generate_products_for_category_full($category_slug) {
 }
 
 function generate_products_for_catalogue_full($category_slug) {
+	
+	$term = get_term_by('slug', $category_slug, 'product_cat');
+
+	$tags = get_terms('product_tag');	
+
 	echo "<div class='category-section-container'>";
 
-	$term = get_term_by('slug', $category_slug, 'product_cat');
-    echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
+	echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
     echo '<p class="category-section-text">Мы предлагаем удилища лучших брендов. У нас есть удилище для любых предпочтений.</p>';
 	echo '<div class="cards-container">';
 
-					
+	foreach ($tags as $tag){
+		
+		$args = array(
+			'post_type' => 'product',
+			'product_cat' => $category_slug,
+			'product_tag' => $tag->slug,
+			'posts_per_page' => -1
+		); 
+		 
+		$products = wc_get_products($args);
+		$product_number_in_tag = count($products);
+		
+		if ($products){
+			?>
+			<a class="brand-section-link" href="/product-tag/<?php echo $tag->slug; ?>">
+				<div class="brand-section">					
+					<div class="brand-section-title">
+						<h3><?php echo "$tag->name ($product_number_in_tag)"; ?></h3>
+					</div>									
+				</div>
+			</a>
+			<?php 				
+		}
+	}				
 
 	echo '</div>'; 
-	echo '</div>'; 
+	echo '</div>';
 }
 
     

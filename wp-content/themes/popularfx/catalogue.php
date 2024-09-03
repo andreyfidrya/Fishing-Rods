@@ -14,10 +14,10 @@ Template Name: PopularFX-catalogue
 
 get_header();
 
-    generate_products_for_category_full('feeder-rods');
-    generate_products_for_category_full('spinning-rods');
-    generate_products_for_category_full('float-rods');
+    // generate_products_for_category_full('feeder-rods');
+    // generate_products_for_category_full('spinning-rods');
+    // generate_products_for_category_full('float-rods');
 
-    // generate_brand_block('feeder-rods');
-
+    generate_products_for_catalogue_full('feeder-rods');    
+    
 get_footer();
