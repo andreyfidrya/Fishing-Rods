@@ -18,6 +18,8 @@ get_header();
     // generate_products_for_category_full('spinning-rods');
     // generate_products_for_category_full('float-rods');
 
-    generate_products_for_catalogue_full('feeder-rods');    
+    generate_products_for_catalogue_full('feeder-rods');
+    generate_products_for_catalogue_full('spinning-rods');
+    generate_products_for_catalogue_full('float-rods');    
     
 get_footer();

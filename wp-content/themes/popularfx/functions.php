@@ -904,8 +904,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
                     $image_src = wp_get_attachment_image_src($image_id, 'full');
                     if ($image_src) {
                         echo '<img src="' . esc_url($image_src[0]) . '" alt="' . esc_attr($product_details['name']) . '" class="card-img" height="500" width="200">';
-                    }
-                    
+                    }                    
                     ?>
                 </div>
                 <h3 class="card-title"><?php echo $product_details['name']; ?></h3>
@@ -1105,7 +1104,10 @@ function generate_products_for_catalogue_full($category_slug) {
 		if ($products){
 			?>
 			<a class="brand-section-link" href="/product-tag/<?php echo $tag->slug; ?>">
-				<div class="brand-section">					
+				<div class="brand-section">	
+					<div class="card-box-img">					
+						<img src="<?php echo get_template_directory_uri(); ?>/images/brands/<?php echo $tag->slug; ?>.png" width="300" height="300" />			
+					</div>				
 					<div class="brand-section-title">
 						<h3><?php echo "$tag->name ($product_number_in_tag)"; ?></h3>
 					</div>									
