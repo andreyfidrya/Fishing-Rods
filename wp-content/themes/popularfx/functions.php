@@ -931,7 +931,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
         	<?php if($product->is_in_stock()): ?>
             <button type="button" data-product-id="<?php echo $product_id; ?>" class="card-actions-quantity-btn card-minus" aria-label="-"></button>
             <div role="button" tabindex="0" class="add-to-cart-button page-cursor-pointer" data-product-id="<?php echo $product_id; ?>" data-tooltip="Используйте кнопки -/+">
-                <span id="btn_add_<?php echo $product_id; ?>">В корзину</span>
+                <span id="add_to_cart<?php echo $product_id; ?>">В корзину</span>
             </div>
             <button type="button" data-product-id="<?php echo $product_id; ?>" class="card-actions-quantity-btn card-plus" aria-label="+"></button>
         	<?php else: ?>
@@ -1080,13 +1080,15 @@ function generate_products_for_category_full($category_slug) {
 function generate_products_for_catalogue_full($category_slug) {
 	
 	$term = get_term_by('slug', $category_slug, 'product_cat');
-
+	
 	$tags = get_terms('product_tag');	
 
 	echo "<div class='category-section-container'>";
 
 	echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
-    echo '<p class="category-section-text">Мы предлагаем удилища лучших брендов. У нас есть удилище для любых предпочтений.</p>';
+	?>
+    <p class="category-section-text">Мы предлагаем <?php echo $term->name;?> лучших брендов. У нас есть удилище для любых предпочтений.</p>';
+	<?php
 	echo '<div class="cards-container">';
 
 	foreach ($tags as $tag){
