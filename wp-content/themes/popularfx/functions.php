@@ -1087,7 +1087,7 @@ function generate_products_for_catalogue_full($category_slug) {
 
 	echo '<h2 class="category-section-title">' . mb_strtoupper($term->name, 'UTF-8') . '</h2>';
 	?>
-    <p class="category-section-text">Мы предлагаем <?php echo $term->name;?> лучших брендов. У нас есть удилище для любых предпочтений.</p>';
+    <p class="category-section-text">Мы предлагаем <a href="/<?php echo $category_slug; ?>"><?php echo $term->name;?> </a> лучших брендов. У нас есть удилище для любых предпочтений.</p>';
 	<?php
 	echo '<div class="cards-container">';
 
