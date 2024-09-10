@@ -1136,21 +1136,45 @@ function generate_filters_block($category_slug){
     {
         foreach ($length_terms as $term) {
             if (in_array($term->slug, $allowed_lengths)) {
-				echo "$term->name".'</br>';
+				
+				echo '<div class="modal-filters-btn modal-filters-btn-flex " id="filter-taste-' . esc_attr($term->slug) . '">';
+				echo '<span>' . esc_attr($term->name) . '</span>';
+				echo '</div>';
             }			
         }		
     }
 	
-	if($category_slug === 'feeder-rods'){
+	/*if($category_slug === 'feeder-rods'){
 		print_rod_lengths($length_terms, $allowed_lengths_feeder_rods);				
 	}elseif($category_slug === 'float-rods'){
 		print_rod_lengths($length_terms, $allowed_lengths_float_rods);
 	}elseif($category_slug === 'spinning-rods'){
 		print_rod_lengths($length_terms, $allowed_lengths_spinning_rods);		
-	}	
+	}*/	
 		
 ?>
-
+	
+		<div id="filters_modal" class="ns-modal modal-scroll">
+			<div class="modal-container" id="filter-block-of-<?= $category_slug ?>">
+				<button id="close_modal_filters_category" class="modal-btn-close"></button>
+				<h2 class="modal-title">фильтры</h2>
+			</div>
+				<div class="modal-wrapper-filters modal-wrapper-filters-taste">
+					<h3 class="modal-filters-title">Длина:</h3>
+					<div class="modal-filters-container-btn">
+						<?php
+							if($category_slug === 'feeder-rods'){
+								print_rod_lengths($length_terms, $allowed_lengths_feeder_rods);				
+							}elseif($category_slug === 'float-rods'){
+								print_rod_lengths($length_terms, $allowed_lengths_float_rods);
+							}elseif($category_slug === 'spinning-rods'){
+								print_rod_lengths($length_terms, $allowed_lengths_spinning_rods);		
+							}
+						?>
+					</div>
+				</div>
+		</div>
+	
 <?php 
 }
 
