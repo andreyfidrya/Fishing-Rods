@@ -2108,4 +2108,94 @@ object {
     letter-spacing: 0.26px;
     text-decoration: underline;    
 }
+
+.modal-filters-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 7px 20px;
+    color: #000;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    background-color: #FAFAF8;
+    border: 1px solid #E0D9D0;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.modal-filters-title {
+    color: #000;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+#page_body_fishingrods.no-scroll {
+    overflow: hidden;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .ns-modal {
+        /* position: absolute;
+        top: 0;
+        left: 50%; */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 790px;
+        height: auto;
+        max-height: 100%;
+        background-color: white;
+    }
+}
+
+.modal-order-details .modal-btn-close {
+    top: -16px;
+    right: -16px;
+}
+
+.modal-title {
+    color: #000;
+    font-family: Gilroy;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.modal-wrapper-filters {
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 31px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+}
+
+.modal-filters-container-btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.modal-filters-container-btn > div {
+    flex-shrink: 0;
+}
+
+
+
+
+
 	

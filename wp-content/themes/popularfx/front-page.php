@@ -31,9 +31,11 @@ get_header();
         
         // list_all_products();
 
-        generate_owl_cards_section('feeder-rods');
-        generate_owl_cards_section('spinning-rods');
-        generate_owl_cards_section('float-rods');
+        // generate_owl_cards_section('feeder-rods');
+        // generate_owl_cards_section('spinning-rods');
+        // generate_owl_cards_section('float-rods');
+
+        generate_filters_block('float-rods');
 
     ?>
 

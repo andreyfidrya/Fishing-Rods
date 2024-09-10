@@ -938,8 +938,8 @@ function generate_product_block($product_id, $product_details, $category_slug){
             <div role="button" tabindex="0" class="add-to-cart-button page-cursor-pointer no-available" data-product-id="<?php echo $product_id; ?>">
                 <span id="btn_add_<?php echo $product_id; ?>">Нет в наличии</span>
             </div>
-        	<?php endif; ?>
-        </div>			
+        	<?php endif; ?>			
+        	</div>			
 		</a>				
 	</div>
 	<?php
@@ -1121,6 +1121,37 @@ function generate_products_for_catalogue_full($category_slug) {
 
 	echo '</div>'; 
 	echo '</div>';
+}
+
+function generate_filters_block($category_slug){
+	
+	$length_terms = get_terms('pa_length', array('hide_empty' => false));
+	$test_terms = get_terms('pa_test', array('hide_empty' => false));
+
+	$allowed_lengths_feeder_rods = array('330-mm', '360-mm', '390-mm');
+	$allowed_lengths_float_rods = array('400-mm', '500-mm', '600-mm', '700-mm');
+	$allowed_lengths_spinning_rods = array('210-mm', '220-mm', '230-mm');
+
+	function print_rod_lengths($length_terms, $allowed_lengths)
+    {
+        foreach ($length_terms as $term) {
+            if (in_array($term->slug, $allowed_lengths)) {
+				echo "$term->name".'</br>';
+            }			
+        }		
+    }
+	
+	if($category_slug === 'feeder-rods'){
+		print_rod_lengths($length_terms, $allowed_lengths_feeder_rods);				
+	}elseif($category_slug === 'float-rods'){
+		print_rod_lengths($length_terms, $allowed_lengths_float_rods);
+	}elseif($category_slug === 'spinning-rods'){
+		print_rod_lengths($length_terms, $allowed_lengths_spinning_rods);		
+	}	
+		
+?>
+
+<?php 
 }
 
     
