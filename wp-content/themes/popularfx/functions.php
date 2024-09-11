@@ -1125,54 +1125,66 @@ function generate_products_for_catalogue_full($category_slug) {
 
 function generate_filters_block($category_slug){
 	
-	$length_terms = get_terms('pa_length', array('hide_empty' => false));
-	$test_terms = get_terms('pa_test', array('hide_empty' => false));
+	$length_terms = get_terms('pa_length', array('hide_empty' => false));	
+	$test_terms = get_terms('pa_test', array('hide_empty' => false));		
 
 	$allowed_lengths_feeder_rods = array('330-mm', '360-mm', '390-mm');
 	$allowed_lengths_float_rods = array('400-mm', '500-mm', '600-mm', '700-mm');
 	$allowed_lengths_spinning_rods = array('210-mm', '220-mm', '230-mm');
 
-	function print_rod_lengths($length_terms, $allowed_lengths)
+	$allowed_tests_feeder_rods = array('80-gr', '100-gr', '120-gr');
+	$allowed_tests_float_rods = array('25-gr', '30-gr');
+	$allowed_tests_spinning_rods = array('5-20-gr', '5-25-gr', '7-23-gr', '7-35-gr');
+
+	function print_rod_filter_parameters($terms, $allowed_terms)
     {
-        foreach ($length_terms as $term) {
-            if (in_array($term->slug, $allowed_lengths)) {
+        foreach ($terms as $term) {
+            if (in_array($term->slug, $allowed_terms)) {
 				
 				echo '<div class="modal-filters-btn modal-filters-btn-flex " id="filter-taste-' . esc_attr($term->slug) . '">';
 				echo '<span>' . esc_attr($term->name) . '</span>';
 				echo '</div>';
             }			
         }		
-    }
-	
-	/*if($category_slug === 'feeder-rods'){
-		print_rod_lengths($length_terms, $allowed_lengths_feeder_rods);				
-	}elseif($category_slug === 'float-rods'){
-		print_rod_lengths($length_terms, $allowed_lengths_float_rods);
-	}elseif($category_slug === 'spinning-rods'){
-		print_rod_lengths($length_terms, $allowed_lengths_spinning_rods);		
-	}*/	
+    }	
 		
-?>
-	
+?>	
+		
 		<div id="filters_modal" class="ns-modal modal-scroll">
 			<div class="modal-container" id="filter-block-of-<?= $category_slug ?>">
 				<button id="close_modal_filters_category" class="modal-btn-close"></button>
 				<h2 class="modal-title">фильтры</h2>
 			</div>
-				<div class="modal-wrapper-filters modal-wrapper-filters-taste">
-					<h3 class="modal-filters-title">Длина:</h3>
-					<div class="modal-filters-container-btn">
-						<?php
-							if($category_slug === 'feeder-rods'){
-								print_rod_lengths($length_terms, $allowed_lengths_feeder_rods);				
-							}elseif($category_slug === 'float-rods'){
-								print_rod_lengths($length_terms, $allowed_lengths_float_rods);
-							}elseif($category_slug === 'spinning-rods'){
-								print_rod_lengths($length_terms, $allowed_lengths_spinning_rods);		
-							}
-						?>
-					</div>
+			<div class="modal-wrapper-filters modal-wrapper-filters-taste">
+				<h3 class="modal-filters-title">Длина:</h3>
+				<div class="modal-filters-container-btn">
+					<?php
+						if($category_slug === 'feeder-rods'){
+							print_rod_filter_parameters($length_terms, $allowed_lengths_feeder_rods);				
+						}elseif($category_slug === 'float-rods'){
+							print_rod_filter_parameters($length_terms, $allowed_lengths_float_rods);
+						}elseif($category_slug === 'spinning-rods'){
+							print_rod_filter_parameters($length_terms, $allowed_lengths_spinning_rods);		
+						}
+					?>
 				</div>
+				<h3 class="modal-filters-title">Тест:</h3>
+				<div class="modal-filters-container-btn">
+					<?php
+						if($category_slug === 'feeder-rods'){
+							print_rod_filter_parameters($test_terms, $allowed_tests_feeder_rods);				
+						}elseif($category_slug === 'float-rods'){
+							print_rod_filter_parameters($test_terms, $allowed_tests_float_rods);
+						}elseif($category_slug === 'spinning-rods'){
+							print_rod_filter_parameters($test_terms, $allowed_tests_spinning_rods);		
+						}
+					?>
+				</div>
+				<div class="modal-box-btns">
+				<button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">сбросить фильтры</button>
+                <button id="filter_modal_apply" class="modal-btn" type="button">Применить</button>
+				</div>		
+			</div>
 		</div>
 	
 <?php 

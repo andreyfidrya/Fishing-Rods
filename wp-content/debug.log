@@ -24,3 +24,23 @@
 [10-Sep-2024 19:51:47 UTC] PHP Warning:  Undefined variable $active_class in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1140
 [10-Sep-2024 19:51:47 UTC] PHP Warning:  Undefined variable $active_class in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1140
 [10-Sep-2024 19:51:47 UTC] PHP Warning:  Undefined variable $active_class in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1140
+[11-Sep-2024 07:40:32 UTC] Automatic updates starting...
+[11-Sep-2024 07:40:33 UTC]   Automatic plugin updates starting...
+[11-Sep-2024 07:40:33 UTC]   Automatic plugin updates complete.
+[11-Sep-2024 07:40:34 UTC] Automatic updates complete.
+[11-Sep-2024 11:13:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function print_rod_lengths() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php:1161
+Stack trace:
+#0 D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\front-page.php(38): generate_filters_block('float-rods')
+#1 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include('D:\\OSPanel\\home...')
+#2 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
+#3 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
+#4 {main}
+  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1161
+[11-Sep-2024 12:13:49 UTC] Automatic updates starting...
+[11-Sep-2024 12:13:50 UTC]   Automatic plugin updates starting...
+[11-Sep-2024 12:13:50 UTC]   Automatic plugin updates complete.
+[11-Sep-2024 12:13:51 UTC] Automatic updates complete.
+[11-Sep-2024 12:16:41 UTC] PHP Notice:  Only variables should be passed by reference in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1128
+[11-Sep-2024 12:16:41 UTC] PHP Notice:  Only variables should be passed by reference in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1129
+[11-Sep-2024 12:16:41 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1141
+[11-Sep-2024 12:16:41 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\functions.php on line 1141

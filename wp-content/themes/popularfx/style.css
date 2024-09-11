@@ -2155,9 +2155,9 @@ object {
 
 @media screen and (min-width: 1200px) {
     .ns-modal {
-        /* position: absolute;
+        /*position: absolute;
         top: 0;
-        left: 50%; */
+        left: 50%;*/ 
         position: fixed;
         top: 50%;
         left: 50%;
@@ -2236,12 +2236,14 @@ object {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 1px;
+	margin-left: 50px;
 }
 
 .modal-filters-container-btn {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+	margin-left: 50px;
     gap: 20px;
 }
 
@@ -2291,6 +2293,62 @@ object {
     gap: 15px;
     align-items: center;
     padding-left: 15px;
+}
+
+.modal-btn {
+    padding: 16px 32px;
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background: #000;
+    border: none;
+    outline: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: #000000CF;
+}
+
+.modal-box-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+	margin-right: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.modal-btn-remove-filters {
+    padding: 6px 0px 6px 0px;
+    color: #000;
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.modal-btn-remove-filters:hover {
+    border-color: transparent;
 }
 
 

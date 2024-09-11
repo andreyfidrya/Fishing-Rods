@@ -35,7 +35,7 @@ get_header();
         // generate_owl_cards_section('spinning-rods');
         // generate_owl_cards_section('float-rods');
 
-        generate_filters_block('float-rods');
+        generate_filters_block('feeder-rods');
 
     ?>
 
