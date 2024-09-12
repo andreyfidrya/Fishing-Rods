@@ -857,6 +857,25 @@ if ( class_exists( 'WooCommerce' ) ) {
 // Update the theme
 require_once dirname( __FILE__ ) . '/inc/popularfx.php';
 
+// Change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_add_to_cart_button_text_single' ); 
+function woocommerce_add_to_cart_button_text_single() {
+    return __( 'В корзину', 'woocommerce' ); 
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_customize_tabs', 100, 1 );
+
+// Change tab texts on single product page
+function woo_customize_tabs( $tabs ) {
+
+    unset($tabs['reviews']);    // Remove the reviews tab
+
+    $tabs['description']['title'] = __( 'Описание' ); // Rename the description tab
+	$tabs['additional_information']['title'] = __( 'Параметры' ); // Rename the additional information tab	
+
+    return $tabs;
+}
+
 function generate_product_details($product_id){
 	$product = wc_get_product($product_id);
 	
