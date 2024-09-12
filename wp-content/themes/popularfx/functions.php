@@ -863,6 +863,11 @@ function woocommerce_add_to_cart_button_text_single() {
     return __( 'В корзину', 'woocommerce' ); 
 }
 
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_product_add_to_cart_text' ); 
+function woocommerce_product_add_to_cart_text() {
+    return __( 'В корзину', 'woocommerce' ); 
+}
+
 add_filter( 'woocommerce_product_tabs', 'woo_customize_tabs', 100, 1 );
 
 // Change tab texts on single product page
