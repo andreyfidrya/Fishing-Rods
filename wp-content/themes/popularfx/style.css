@@ -2274,10 +2274,15 @@ object {
     background-color: #f3f3eb;
 }
 
-.modal-filters-btn.active {
+/*.modal-filters-btn.active {
     background-color: #826D49;
     color: #fff;
-}
+}*/
+
+.active, .modal-filters-btn:hover {
+	background-color: #826D49;
+    color: #fff;
+  }
 
 .modal-filters-btn.disabled {
     opacity: 0.5;

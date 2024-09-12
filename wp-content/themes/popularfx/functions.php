@@ -1124,6 +1124,8 @@ function generate_products_for_catalogue_full($category_slug) {
 }
 
 function generate_filters_block($category_slug){
+
+	global $view_filters, $filter_results_count;	
 	
 	$length_terms = get_terms('pa_length', array('hide_empty' => false));	
 	$test_terms = get_terms('pa_test', array('hide_empty' => false));		
@@ -1138,29 +1140,32 @@ function generate_filters_block($category_slug){
 
 	function print_rod_filter_parameters($terms, $allowed_terms)
     {
-        foreach ($terms as $term) {
-            if (in_array($term->slug, $allowed_terms)) {
-				
-				echo '<div class="modal-filters-btn modal-filters-btn-flex " id="filter-taste-' . esc_attr($term->slug) . '">';
-				echo '<span>' . esc_attr($term->name) . '</span>';
-				echo '</div>';
-            }			
-        }		
+		global $view_filters;
+		$lenght_filters = isset($view_filters['lenght']) && is_array($view_filters['lenght']) ? $view_filters['lenght'] : [];		
+			
+			foreach ($terms as $term) {				
+				if (in_array($term->slug, $allowed_terms)) {
+					// $isActive = in_array($term->slug, $lenght_filters);
+					// $active_class = $isActive ? 'active' : '';									
+					echo '<div class="modal-filters-btn modal-filters-btn-flex">';
+					echo '<span>' . esc_attr($term->name) . '</span>';
+					echo '</div>';
+				}			
+			}				
     }	
 		
-?>	
-		
+?>		
 		<div id="filters_modal" class="ns-modal modal-scroll">
 			<div class="modal-container" id="filter-block-of-<?= $category_slug ?>">
 				<button id="close_modal_filters_category" class="modal-btn-close"></button>
 				<h2 class="modal-title">фильтры</h2>
 			</div>
 			<div class="modal-wrapper-filters modal-wrapper-filters-taste">
-				<h3 class="modal-filters-title">Длина:</h3>
-				<div class="modal-filters-container-btn">
+				<h3 class="modal-filters-title">Длина:</h3>				
+				<div class="modal-filters-container-btn" id="filterlengthDIV">
 					<?php
-						if($category_slug === 'feeder-rods'){
-							print_rod_filter_parameters($length_terms, $allowed_lengths_feeder_rods);				
+						if($category_slug === 'feeder-rods'){							
+							print_rod_filter_parameters($length_terms, $allowed_lengths_feeder_rods);											
 						}elseif($category_slug === 'float-rods'){
 							print_rod_filter_parameters($length_terms, $allowed_lengths_float_rods);
 						}elseif($category_slug === 'spinning-rods'){
@@ -1168,8 +1173,9 @@ function generate_filters_block($category_slug){
 						}
 					?>
 				</div>
+				
 				<h3 class="modal-filters-title">Тест:</h3>
-				<div class="modal-filters-container-btn">
+				<div class="modal-filters-container-btn">					
 					<?php
 						if($category_slug === 'feeder-rods'){
 							print_rod_filter_parameters($test_terms, $allowed_tests_feeder_rods);				
@@ -1186,7 +1192,23 @@ function generate_filters_block($category_slug){
 				</div>		
 			</div>
 		</div>
-	
+		<script>
+		var btnContainer = document.getElementById("filterlengthDIV");
+		var lengthbtns = btnContainer.getElementsByClassName("modal-filters-btn");
+				
+		for (var i = 0; i < lengthbtns.length; i++) {
+		lengthbtns[i].addEventListener("click", function() {
+		var current = document.getElementsByClassName("active");
+
+		// If there's no active class
+		if (current.length > 0) {
+			current[0].className = current[0].className.replace(" active", "");
+			}
+			// Add the active class to the current/clicked button
+			this.className += " active";
+			});
+		}	
+		</script>
 <?php 
 }
 
