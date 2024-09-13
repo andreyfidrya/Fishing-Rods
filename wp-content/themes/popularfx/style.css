@@ -1702,8 +1702,9 @@ object {
     flex-direction: column;
     justify-content: center;
     width: 250px;
-    height: 450px;
-    background: #FFF;
+    height: 500px;
+    background: #FFF;	
+	align-items: center;
 }
 
 .card-link {
@@ -1821,10 +1822,10 @@ object {
 
 .card-actions {
     display: flex;
-    margin-top: 8px;
+    /*margin-top: 8px;*/
     flex-shrink: 0;
     padding: 0 14px 30px;
-    gap: 17px;
+    /*gap: 17px;*/
     align-items: center;
     justify-content: center;
 }

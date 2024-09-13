@@ -904,6 +904,7 @@ function generate_product_block($product_id, $product_details, $category_slug){
 	$product = wc_get_product($product_id);
     $product_sale_price = $product->get_sale_price();
     $product_regular_price = $product->get_regular_price();
+	$product_permalink = $product->get_permalink();
 	$term = get_term_by('slug', $category_slug, 'product_cat');
 	$category_name = $term->name;    
     // ob_start();
@@ -951,18 +952,14 @@ function generate_product_block($product_id, $product_details, $category_slug){
                 <?php echo number_format($product_details['price'], 0, '.', ' '); ?>&nbsp;Грн
             </p>                                    
             <?php endif; ?>
-			<div class="card-actions" id="ns_<?php echo $product_id; ?>">
-        	<?php if($product->is_in_stock()): ?>
-            <button type="button" data-product-id="<?php echo $product_id; ?>" class="card-actions-quantity-btn card-minus" aria-label="-"></button>
-            <div role="button" tabindex="0" class="add-to-cart-button page-cursor-pointer" data-product-id="<?php echo $product_id; ?>" data-tooltip="Используйте кнопки -/+">
-                <span id="add_to_cart<?php echo $product_id; ?>">В корзину</span>
-            </div>
-            <button type="button" data-product-id="<?php echo $product_id; ?>" class="card-actions-quantity-btn card-plus" aria-label="+"></button>
-        	<?php else: ?>
-            <div role="button" tabindex="0" class="add-to-cart-button page-cursor-pointer no-available" data-product-id="<?php echo $product_id; ?>">
-                <span id="btn_add_<?php echo $product_id; ?>">Нет в наличии</span>
-            </div>
-        	<?php endif; ?>			
+			<div class="card-actions">
+				<?php if($product->is_in_stock()): ?>
+					<a href="/cart/?add-to-cart=<?php echo $product_id; ?>" class="add-to-cart-button page-cursor-pointer">В корзину</a>				
+				<?php else: ?>
+				<div role="button" tabindex="0" class="add-to-cart-button page-cursor-pointer no-available">
+					<span id="btn_add_<?php echo $product_id; ?>">Нет в наличии</span>
+				</div>
+        		<?php endif; ?>			
         	</div>			
 		</a>				
 	</div>
@@ -1231,7 +1228,8 @@ function generate_filters_block($category_slug){
 			// Add the active class to the current/clicked button
 			this.className += " active";
 			});
-		}	
+		}		
+		
 		</script>
 <?php 
 }
