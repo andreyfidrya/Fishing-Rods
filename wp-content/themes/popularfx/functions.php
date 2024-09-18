@@ -1175,9 +1175,19 @@ function generate_filters_block($category_slug){
 			}				
     }	
 		
-?>		
+?>	
+	<div class="category-filters-hidden">
+		<div class="category-wrapper-filters">
+			<div class="category-container-filters">
+				<div class="category-wrapper-btn-filters">			
+					<button id="open_modal_filters_category" class="category-btn-filters" type="button">ФИЛЬТРЫ</button>
+				</div>				       
+			</div>
+		</div>
+	</div>	
+	<div id="filters_backdrop" class="backdrop">
 		<div id="filters_modal" class="ns-modal modal-scroll">
-			<div class="modal-container" id="filter-block-of-<?= $category_slug ?>">
+			<div class="modal-container">
 				<button id="close_modal_filters_category" class="modal-btn-close"></button>
 				<h2 class="modal-title">фильтры</h2>
 			</div>
@@ -1212,11 +1222,14 @@ function generate_filters_block($category_slug){
                 <button id="filter_modal_apply" class="modal-btn" type="button">Применить</button>
 				</div>		
 			</div>
-		</div>
-		<script>
+		</div>	
+	</div>
+
+	<script>
+		
 		var btnContainer = document.getElementById("filterlengthDIV");
 		var lengthbtns = btnContainer.getElementsByClassName("modal-filters-btn");
-				
+									
 		for (var i = 0; i < lengthbtns.length; i++) {
 		lengthbtns[i].addEventListener("click", function() {
 		var current = document.getElementsByClassName("active");
@@ -1224,14 +1237,37 @@ function generate_filters_block($category_slug){
 		// If there's no active class
 		if (current.length > 0) {
 			current[0].className = current[0].className.replace(" active", "");
-			}
-			// Add the active class to the current/clicked button
+		}
+		// Add the active class to the current/clicked button
 			this.className += " active";
-			});
-		}		
+		});
+		}
 		
-		</script>
-<?php 
+		function initializeModalFiltersCategory(){
+			const $document = jQuery(document);
+
+			const $backdrop = jQuery("#filters_backdrop");
+    		const $modal = jQuery("#filters_modal");
+
+			function openModal() {
+			$backdrop.fadeIn();
+			$modal.addClass("open");
+    		}		
+
+			$document.on("click", "#open_modal_filters_category", openModal);
+
+			function closeModal() {
+			$backdrop.fadeOut();
+			$modal.removeClass("open");			
+			}
+
+			$document.on("click", "#close_modal_filters_category", closeModal);
+
+			}
+			initializeModalFiltersCategory();
+	</script>
+	
+<?php
 }
 
     
