@@ -881,6 +881,16 @@ function woo_customize_tabs( $tabs ) {
     return $tabs;
 }
 
+function enqueue_custom_js() {
+    // Register the script (if you need dependencies or versioning)
+    wp_register_script('custom-script', get_template_directory_uri() . '/js/fishing-rods.js', array(), '1.0', true);
+
+    // Enqueue the script
+    wp_enqueue_script('custom-script');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_js');
+
+
 function generate_product_details($product_id){
 	$product = wc_get_product($product_id);
 	
@@ -1224,7 +1234,11 @@ function generate_filters_block($category_slug){
 			</div>
 		</div>	
 	</div>
-
+	<?php
+	function custom_scripts (){
+		wp_enqueue_script('custom_script', get_template_directory_uri() . '/js/fishing-rods.js', array(), '1.0', true);
+	}
+	?>
 	<script>
 		
 		var btnContainer = document.getElementById("filterlengthDIV");
@@ -1241,30 +1255,8 @@ function generate_filters_block($category_slug){
 		// Add the active class to the current/clicked button
 			this.className += " active";
 		});
-		}
-		
-		function initializeModalFiltersCategory(){
-			const $document = jQuery(document);
+		}				
 
-			const $backdrop = jQuery("#filters_backdrop");
-    		const $modal = jQuery("#filters_modal");
-
-			function openModal() {
-			$backdrop.fadeIn();
-			$modal.addClass("open");
-    		}		
-
-			$document.on("click", "#open_modal_filters_category", openModal);
-
-			function closeModal() {
-			$backdrop.fadeOut();
-			$modal.removeClass("open");			
-			}
-
-			$document.on("click", "#close_modal_filters_category", closeModal);
-
-			}
-			initializeModalFiltersCategory();
 	</script>
 	
 <?php
