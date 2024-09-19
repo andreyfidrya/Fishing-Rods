@@ -34,6 +34,11 @@ jQuery(".modal-filters-btn").on("click", function () {
     updateArrays();
 });
 
+jQuery("#filter_modal_reset").on("click", function () {
+    jQuery(".modal-filters-btn").removeClass("active");
+    updateArrays();
+});
+
 
 
            

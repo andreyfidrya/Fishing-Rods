@@ -1228,7 +1228,7 @@ function print_rod_filter_parameters($terms, $allowed_terms)
 					?>
 				</div>
 				<div class="modal-box-btns">
-				<button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">сбросить фильтры</button>
+				<button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">Сбросить фильтры</button>
                 <button id="filter_modal_apply" class="modal-btn" type="button">Применить</button>
 				</div>		
 			</div>
