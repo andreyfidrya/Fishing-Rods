@@ -19,14 +19,23 @@ function initializeModalFiltersCategory(){
     }
 initializeModalFiltersCategory();
 
-let termArray = [];
+let lengthArray = [];
+let testArray = [];
 
 function updateArrays(){
-termArray = jQuery('.modal-filters-btn[id^="filter-term-"].active')
+
+lengthArray = jQuery('.modal-filters-btn[id^="filter-length-"].active')
 .map(function () {
-    return this.id.replace("filter-term-", "");
+    return this.id.replace("filter-length-", "");
 })
     .get();
+
+testArray = jQuery('.modal-filters-btn[id^="filter-test-"].active')
+.map(function () {
+    return this.id.replace("filter-test-", "");
+})
+    .get();
+
 }
 
 jQuery(".modal-filters-btn").on("click", function () {

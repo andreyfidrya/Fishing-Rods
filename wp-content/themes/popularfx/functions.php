@@ -1169,21 +1169,31 @@ function generate_filters_block($category_slug){
 	$allowed_tests_float_rods = array('25-gr', '30-gr');
 	$allowed_tests_spinning_rods = array('5-20-gr', '5-25-gr', '7-23-gr', '7-35-gr');
 
-function print_rod_filter_parameters($terms, $allowed_terms)
+function print_length_filter_parameters($terms, $allowed_terms)
     {
-		// global $view_filters;
-		$lenght_filters = isset($view_filters['lenght']) && is_array($view_filters['lenght']) ? $view_filters['lenght'] : [];		
-			
 			foreach ($terms as $term) {				
 				if (in_array($term->slug, $allowed_terms)) {
 				// $isActive = in_array($term->slug, $lenght_filters);
 				// $active_class = $isActive ? 'active' : '';									
-				echo '<div class="modal-filters-btn modal-filters-btn-flex" id="filter-term-' . esc_attr($term->slug) . '">';
+				echo '<div class="modal-filters-btn modal-filters-btn-flex" id="filter-length-' . esc_attr($term->slug) . '">';
 				echo '<span>' . esc_attr($term->name) . '</span>';
 				echo '</div>';
 			}			
 		}				
-    }	
+    }
+	
+function print_test_filter_parameters($terms, $allowed_terms)
+    {				
+		foreach ($terms as $term) {				
+			if (in_array($term->slug, $allowed_terms)) {
+			// $isActive = in_array($term->slug, $test_filters);
+			// $active_class = $isActive ? 'active' : '';									
+			echo '<div class="modal-filters-btn modal-filters-btn-flex" id="filter-test-' . esc_attr($term->slug) . '">';
+			echo '<span>' . esc_attr($term->name) . '</span>';
+			echo '</div>';
+			}			
+		}				
+    }
 		
 ?>	
 	<div class="category-filters-hidden">
@@ -1203,14 +1213,14 @@ function print_rod_filter_parameters($terms, $allowed_terms)
 			</div>
 			<div class="modal-wrapper-filters modal-wrapper-filters-taste">
 				<h3 class="modal-filters-title">Длина:</h3>				
-				<div class="modal-filters-container-btn" id="filterlengthDIV">
+				<div class="modal-filters-container-btn">
 					<?php
 						if($category_slug === 'feeder-rods'){							
-							print_rod_filter_parameters($length_terms, $allowed_lengths_feeder_rods);											
+							print_length_filter_parameters($length_terms, $allowed_lengths_feeder_rods);											
 						}elseif($category_slug === 'float-rods'){
-							print_rod_filter_parameters($length_terms, $allowed_lengths_float_rods);
+							print_length_filter_parameters($length_terms, $allowed_lengths_float_rods);
 						}elseif($category_slug === 'spinning-rods'){
-							print_rod_filter_parameters($length_terms, $allowed_lengths_spinning_rods);		
+							print_length_filter_parameters($length_terms, $allowed_lengths_spinning_rods);		
 						}
 					?>
 				</div>
@@ -1219,11 +1229,11 @@ function print_rod_filter_parameters($terms, $allowed_terms)
 				<div class="modal-filters-container-btn">					
 					<?php
 						if($category_slug === 'feeder-rods'){
-							print_rod_filter_parameters($test_terms, $allowed_tests_feeder_rods);				
+							print_test_filter_parameters($test_terms, $allowed_tests_feeder_rods);				
 						}elseif($category_slug === 'float-rods'){
-							print_rod_filter_parameters($test_terms, $allowed_tests_float_rods);
+							print_test_filter_parameters($test_terms, $allowed_tests_float_rods);
 						}elseif($category_slug === 'spinning-rods'){
-							print_rod_filter_parameters($test_terms, $allowed_tests_spinning_rods);		
+							print_test_filter_parameters($test_terms, $allowed_tests_spinning_rods);		
 						}
 					?>
 				</div>
