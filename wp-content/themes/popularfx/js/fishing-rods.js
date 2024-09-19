@@ -17,5 +17,23 @@ function initializeModalFiltersCategory(){
 
     $document.on("click", "#close_modal_filters_category", closeModal);
     }
-    initializeModalFiltersCategory();			
+initializeModalFiltersCategory();
+
+let termArray = [];
+
+function updateArrays(){
+termArray = jQuery('.modal-filters-btn[id^="filter-term-"].active')
+.map(function () {
+    return this.id.replace("filter-term-", "");
+})
+    .get();
+}
+
+jQuery(".modal-filters-btn").on("click", function () {
+    jQuery(this).toggleClass("active");
+    updateArrays();
+});
+
+
+
            

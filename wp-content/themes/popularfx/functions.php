@@ -1169,20 +1169,20 @@ function generate_filters_block($category_slug){
 	$allowed_tests_float_rods = array('25-gr', '30-gr');
 	$allowed_tests_spinning_rods = array('5-20-gr', '5-25-gr', '7-23-gr', '7-35-gr');
 
-	function print_rod_filter_parameters($terms, $allowed_terms)
+function print_rod_filter_parameters($terms, $allowed_terms)
     {
-		global $view_filters;
+		// global $view_filters;
 		$lenght_filters = isset($view_filters['lenght']) && is_array($view_filters['lenght']) ? $view_filters['lenght'] : [];		
 			
 			foreach ($terms as $term) {				
 				if (in_array($term->slug, $allowed_terms)) {
-					// $isActive = in_array($term->slug, $lenght_filters);
-					// $active_class = $isActive ? 'active' : '';									
-					echo '<div class="modal-filters-btn modal-filters-btn-flex">';
-					echo '<span>' . esc_attr($term->name) . '</span>';
-					echo '</div>';
-				}			
-			}				
+				// $isActive = in_array($term->slug, $lenght_filters);
+				// $active_class = $isActive ? 'active' : '';									
+				echo '<div class="modal-filters-btn modal-filters-btn-flex" id="filter-term-' . esc_attr($term->slug) . '">';
+				echo '<span>' . esc_attr($term->name) . '</span>';
+				echo '</div>';
+			}			
+		}				
     }	
 		
 ?>	
@@ -1233,31 +1233,7 @@ function generate_filters_block($category_slug){
 				</div>		
 			</div>
 		</div>	
-	</div>
-	<?php
-	function custom_scripts (){
-		wp_enqueue_script('custom_script', get_template_directory_uri() . '/js/fishing-rods.js', array(), '1.0', true);
-	}
-	?>
-	<script>
-		
-		var btnContainer = document.getElementById("filterlengthDIV");
-		var lengthbtns = btnContainer.getElementsByClassName("modal-filters-btn");
-									
-		for (var i = 0; i < lengthbtns.length; i++) {
-		lengthbtns[i].addEventListener("click", function() {
-		var current = document.getElementsByClassName("active");
-
-		// If there's no active class
-		if (current.length > 0) {
-			current[0].className = current[0].className.replace(" active", "");
-		}
-		// Add the active class to the current/clicked button
-			this.className += " active";
-		});
-		}				
-
-	</script>
+	</div>		
 	
 <?php
 }
