@@ -890,7 +890,6 @@ function enqueue_custom_js() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_js');
 
-
 function generate_product_details($product_id){
 	$product = wc_get_product($product_id);
 	
@@ -1193,8 +1192,7 @@ function print_test_filter_parameters($terms, $allowed_terms)
 			echo '</div>';
 			}			
 		}				
-    }
-		
+    }	
 ?>	
 	<div class="category-filters-hidden">
 		<div class="category-wrapper-filters">
@@ -1238,8 +1236,15 @@ function print_test_filter_parameters($terms, $allowed_terms)
 					?>
 				</div>
 				<div class="modal-box-btns">
-				<button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">Сбросить фильтры</button>
-                <button id="filter_modal_apply" class="modal-btn" type="button">Применить</button>
+				<?php if (intval($filter_results_count) > 0): ?>
+                        <button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">сбросить фильтры</button>
+                        <button id="filter_modal_apply" class="modal-btn" type="button">
+                            <?php echo intval($filter_results_count); echo '&nbsp;'; echo morph_pack_filter(intval($filter_results_count));?>
+                        </button>
+                    <?php else: ?> 
+                        <button id="filter_modal_reset" class="modal-btn-remove-filters" type="button">сбросить фильтры</button>  
+                        <button id="filter_modal_apply" class="modal-btn" type="button">Применить</button>
+                    <?php endif; ?>
 				</div>		
 			</div>
 		</div>	

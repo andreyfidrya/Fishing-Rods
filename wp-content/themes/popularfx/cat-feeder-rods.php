@@ -14,9 +14,11 @@ Template Name: PopularFX-feeder-rods
 
 get_header();
 
-    generate_products_for_category_full('feeder-rods');    
+    generate_filters_block('feeder-rods');    
+    
+    // generate_products_for_category_full('feeder-rods');    
     ?>
-    <div>
+    <!-- div>
     Фидерная ловля – изобретение английских рыболовов, которое в последние десятилетия стало популярным 
     у нас. Это один из видов донной ловли, особенностью которого является активное прикармливание точки 
     лова с помощью специальной оснастки: сетчатой кормушки-груза с отводом и поводком с крючком. 

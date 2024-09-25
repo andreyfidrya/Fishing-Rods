@@ -21,32 +21,18 @@ initializeModalFiltersCategory();
 
 let lengthArray = [];
 let testArray = [];
-
-function updateArrays(){
-
-lengthArray = jQuery('.modal-filters-btn[id^="filter-length-"].active')
-.map(function () {
-    return this.id.replace("filter-length-", "");
-})
-    .get();
-
-testArray = jQuery('.modal-filters-btn[id^="filter-test-"].active')
-.map(function () {
-    return this.id.replace("filter-test-", "");
-})
-    .get();
-
-}
+let categoryArray = [];
 
 jQuery(".modal-filters-btn").on("click", function () {
     jQuery(this).toggleClass("active");
-    updateArrays();
+    // updateArrays();
 });
 
 jQuery("#filter_modal_reset").on("click", function () {
     jQuery(".modal-filters-btn").removeClass("active");
-    updateArrays();
+    // updateArrays();
 });
+
 
 
 
