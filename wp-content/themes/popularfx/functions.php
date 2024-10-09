@@ -1166,7 +1166,7 @@ function generate_filters_block($category_slug){
 
 	$allowed_tests_feeder_rods = array('80-gr', '100-gr', '120-gr');
 	$allowed_tests_float_rods = array('25-gr', '30-gr');
-	$allowed_tests_spinning_rods = array('5-20-gr', '5-25-gr', '7-23-gr', '7-35-gr');
+	$allowed_tests_spinning_rods = array('5-20-gr', '5-25-gr', '7-23-gr', '7-35-gr'); 	
 
 function print_length_filter_parameters($terms, $allowed_terms)
     {

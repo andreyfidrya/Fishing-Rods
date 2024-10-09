@@ -1,59 +1,19 @@
-
-[23-Sep-2024 19:25:48 UTC] Automatic updates starting...
-[23-Sep-2024 19:25:49 UTC]   Automatic plugin updates starting...
-[23-Sep-2024 19:25:49 UTC]   Automatic plugin updates complete.
-[23-Sep-2024 19:25:50 UTC] Automatic updates complete.
-[24-Sep-2024 12:05:33 UTC] Automatic updates starting...
-[24-Sep-2024 12:05:34 UTC]   Automatic plugin updates starting...
-[24-Sep-2024 12:05:34 UTC]   Automatic plugin updates complete.
-[24-Sep-2024 12:05:35 UTC] Automatic updates complete.
-[24-Sep-2024 13:30:08 UTC] Automatic updates starting...
-[24-Sep-2024 13:30:08 UTC]   Automatic plugin updates starting...
-[24-Sep-2024 13:30:08 UTC]   Automatic plugin updates complete.
-[24-Sep-2024 13:30:08 UTC] Automatic updates complete.
-[24-Sep-2024 19:31:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products_by_category() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php:19
-Stack trace:
-#0 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include()
-#1 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
-#2 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
-#3 {main}
-  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
-[24-Sep-2024 19:32:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products_by_category() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php:19
-Stack trace:
-#0 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include()
-#1 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
-#2 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
-#3 {main}
-  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
-[24-Sep-2024 19:33:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products_by_category() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php:19
-Stack trace:
-#0 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include()
-#1 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
-#2 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
-#3 {main}
-  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
-[24-Sep-2024 19:34:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products_by_category() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php:19
-Stack trace:
-#0 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include()
-#1 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
-#2 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
-#3 {main}
-  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
-[24-Sep-2024 19:35:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products_by_category() in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php:19
-Stack trace:
-#0 D:\OSPanel\home\fishing-rods.local\wp-includes\template-loader.php(106): include()
-#1 D:\OSPanel\home\fishing-rods.local\wp-blog-header.php(19): require_once('D:\\OSPanel\\home...')
-#2 D:\OSPanel\home\fishing-rods.local\index.php(17): require('D:\\OSPanel\\home...')
-#3 {main}
-  thrown in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 19
-[24-Sep-2024 20:14:40 UTC] PHP Warning:  Undefined property: Custom_WooCommerce_API::$count in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 21
-[24-Sep-2024 20:26:05 UTC] PHP Warning:  Undefined property: Custom_WooCommerce_API::$count in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 21
-[24-Sep-2024 20:26:53 UTC] PHP Warning:  Undefined property: Custom_WooCommerce_API::$count in D:\OSPanel\home\fishing-rods.local\wp-content\themes\popularfx\cat-feeder-rods.php on line 21
-[25-Sep-2024 09:14:02 UTC] Automatic updates starting...
-[25-Sep-2024 09:14:03 UTC]   Automatic plugin updates starting...
-[25-Sep-2024 09:14:03 UTC]   Automatic plugin updates complete.
-[25-Sep-2024 09:14:04 UTC] Automatic updates complete.
-[25-Sep-2024 12:33:38 UTC] Automatic updates starting...
-[25-Sep-2024 12:33:39 UTC]   Automatic plugin updates starting...
-[25-Sep-2024 12:33:39 UTC]   Automatic plugin updates complete.
-[25-Sep-2024 12:33:40 UTC] Automatic updates complete.
+[09-Oct-2024 17:20:27 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:20:27 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products/attribute/(?P[\w-]+)/(?P[\w-]+)</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:56:56 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:56:56 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products/attribute/(?P[\w-]+)/(?P[\w-]+)</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:56:56 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products/category/(?P\d+)</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:58:06 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:58:06 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products/attribute/(?P[\w-]+)/(?P[\w-]+)</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 17:58:06 UTC] PHP Notice:  Функция register_rest_route вызвана <strong>неправильно</strong>. В определении маршрута REST API для <code>custom-wc-api/v1/products/category/(?P\d+)</code> отсутствует обязательный аргумент <code>permission_callback</code>. Для общедоступных маршрутов REST API используйте <code>__return_true</code> для разрешения обратного вызова. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 5.5.0.) in D:\OSPanel\home\fishing-rods.local\wp-includes\functions.php on line 6085
+[09-Oct-2024 18:00:29 UTC] PHP Parse error:  syntax error, unexpected identifier "get_products_by_tag", expecting "function" or "const" in D:\OSPanel\home\fishing-rods.local\wp-content\plugins\woocommerce-custom-endpoints\woocommerce-custom-endpoints.php on line 202
+[09-Oct-2024 18:00:30 UTC] PHP Parse error:  syntax error, unexpected identifier "get_products_by_tag", expecting "function" or "const" in D:\OSPanel\home\fishing-rods.local\wp-content\plugins\woocommerce-custom-endpoints\woocommerce-custom-endpoints.php on line 202
+[09-Oct-2024 18:01:41 UTC] Total posts found for tag ID 20: 4
+[09-Oct-2024 18:01:41 UTC] Processing product ID: 75
+[09-Oct-2024 18:01:41 UTC] Product visibility: NULL
+[09-Oct-2024 18:01:41 UTC] Processing product ID: 74
+[09-Oct-2024 18:01:41 UTC] Product visibility: NULL
+[09-Oct-2024 18:01:41 UTC] Processing product ID: 73
+[09-Oct-2024 18:01:41 UTC] Product visibility: NULL
+[09-Oct-2024 18:01:41 UTC] Processing product ID: 71
+[09-Oct-2024 18:01:41 UTC] Product visibility: NULL

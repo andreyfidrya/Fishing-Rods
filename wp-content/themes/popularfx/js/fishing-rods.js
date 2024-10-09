@@ -19,10 +19,6 @@ function initializeModalFiltersCategory(){
     }
 initializeModalFiltersCategory();
 
-let lengthArray = [];
-let testArray = [];
-let categoryArray = [];
-
 jQuery(".modal-filters-btn").on("click", function () {
     jQuery(this).toggleClass("active");
     // updateArrays();
@@ -32,8 +28,3 @@ jQuery("#filter_modal_reset").on("click", function () {
     jQuery(".modal-filters-btn").removeClass("active");
     // updateArrays();
 });
-
-
-
-
-           

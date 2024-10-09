@@ -12,9 +12,15 @@ Template Name: PopularFX-feeder-rods
 
 */
 
-get_header();
+get_header();  
+    
+    generate_filters_block('feeder-rods');
+    
+    /*$url = "https://fishing-rods.local/wp-json/wc/v3/29";
+    $output = file_get_contents($url, true);
+    $decoded = json_decode($output, false);
 
-    generate_filters_block('feeder-rods');    
+    echo count($decoded);*/
     
     // generate_products_for_category_full('feeder-rods');    
     ?>
